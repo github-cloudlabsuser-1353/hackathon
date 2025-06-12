@@ -135,6 +135,7 @@ jobs:
       # where the resource groups will be deployed.
       - name: create resource group
         uses: Azure/arm-deploy@v1
+        continue-on-error: true
         with:
           scope: subscription
           region: ${{ vars.DEPLOYMENTREGION }}
